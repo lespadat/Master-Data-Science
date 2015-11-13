@@ -1,5 +1,5 @@
 #Data Science Master Repository 
 
-Luis Espada Triguero
+Luis Espada
 
 lespadat@gmail.com

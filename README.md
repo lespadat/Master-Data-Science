@@ -1,2 +1,3 @@
-#Luis Espada
-Data Science Master Repository
+#Data Science Master Repository
+Luis Espada
+lespadat@gmail.com

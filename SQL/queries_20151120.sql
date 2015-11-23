@@ -179,6 +179,17 @@ group by country_name
 HAVING COUNT(*) >= 3;
 
 
+-- ciudades x encima de la media de elevación del País
+select A.country_code, A.country_name, A.name, A.elevation, B.elevMediaPais
+from optd_por_public A, 
+(select country_code, country_name, round(avg(elevation),2) as elevMediaPais
+from optd_por_public 
+where location_type = 'C' and elevation is not null
+group by country_code, country_name) B
+where A.country_code = B.country_code
+and A.location_type = 'C'
+and A.elevation > B.elevMediaPais
+order by 2, 4 desc ;
 
 
 
